@@ -1,0 +1,19 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Description:  This template deploys a Transit Gateway in us-east-2 (Ohio)
+
+Resources:
+  WorkshopTGWOhio:
+    Type: "AWS::EC2::TransitGateway"
+    Properties:
+      AmazonSideAsn: 65001
+      Description: "TGW Workshop"
+      AutoAcceptSharedAttachments: "disable"
+      DefaultRouteTableAssociation: "enable"
+      DnsSupport: "enable"
+      VpnEcmpSupport: "enable"
+      Tags:
+      - Key: Application
+        Value: !Ref 'AWS::StackId'
+      - Key: Name
+        Value: Workshop-TGW-Ohio
