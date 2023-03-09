@@ -18,15 +18,3 @@
 5. Pause and discuss any other debugging specific use cases. If time permits, discuss VPC Reachability Analyzer for single region or multi region use cases.
 6. Create new routing tables in each TGW. Revisit association vs. propagation. Keep VPC-attachments in default routing table, but create propagation into new routing tables
 7. Move VPC-attachments from one routing table to another.
-
-## us-east-1 stack output:
-
-PrivateEC2InstanceIP	10.202.20.53
-PublicEC2InstanceIP	44.213.242.102
-TGWNVirginiaID: tgw-0c78d3474bef9bbe1
-
-## us-east-2 stack output:
-
-PrivateEC2InstanceIP	10.101.20.4
-PublicEC2InstanceIP	3.132.15.97
-TGWOhioID: tgw-08b37ef428b28d6bc
